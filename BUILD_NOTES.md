@@ -134,3 +134,10 @@ Regenerated directly from `build.py` with `runpy`; all 40 entries and their actu
 - `4/26` — Gaza card/brief; story 32; ratio, not a date.
 - `2035` — Climate card; story 26; year target, not a date string.
 - All listed date strings match `story-list-42.md`; no unverifiable date strings remain.
+
+## v7 license fix session
+
+- Kit check failure: `license_osi` failed because LICENSE lacked an SPDX line.
+- Prepended exactly `SPDX-License-Identifier: MIT` to LICENSE; preserved all existing license text.
+- Re-ran `python3 build.py`; renderer audits passed. Re-verified `entry.png` SHA-256: `47592ccea56a2b3e982f330bc8b1bfb0a4cfb987d2711a1db916cc1216aaffcd` (454,285 bytes), byte-identical to the pre-session image.
+- Only LICENSE and this appended BUILD_NOTES.md section changed; no other file changed.
